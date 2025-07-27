@@ -3,10 +3,11 @@ import AppNavbar from '../components/Navbar';
 import LandingBg from '../assets/images/landing-bg.png';
 import SearchBar from '../components/SearchBar';
 import WhyChoosingUs from './WhyChoosingUs';
+import BestSelling from './BestSelling';
 
 const Home = () => {
   return (
-    <div title="Home - Furn">
+    <div>
       <div
         style={{
           backgroundImage: `url(${LandingBg})`,
@@ -33,9 +34,10 @@ const Home = () => {
         
       </div>
 
-      <section>
+      <main>
         <WhyChoosingUs />
-      </section>
+        <BestSelling />
+      </main>
     </div>
   );
 };
