@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Card = ({ children, className='' }) => {
+const Card = ({ children, className, style }) => {
   return (
-    <section className={`${className}`}>
+    <section className={`${className}`} style={style}>
         {children}
     </section>
   )

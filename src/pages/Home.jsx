@@ -4,6 +4,7 @@ import LandingBg from '../assets/images/landing-bg.png';
 import SearchBar from '../components/SearchBar';
 import WhyChoosingUs from './WhyChoosingUs';
 import BestSelling from './BestSelling';
+import Experiences from './Experiences';
 
 const Home = () => {
   return (
@@ -13,10 +14,10 @@ const Home = () => {
           backgroundImage: `url(${LandingBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100vh',
+          height: '100dvh',
           width: '100%',
         }}
-        className="relative scroll-smooth"
+        className="relative scroll-smooth pb-50"
       >
         <AppNavbar />
 
@@ -40,6 +41,7 @@ const Home = () => {
       <main>
         <WhyChoosingUs />
         <BestSelling />
+        <Experiences />
       </main>
     </div>
   );
