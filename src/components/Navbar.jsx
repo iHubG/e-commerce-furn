@@ -29,8 +29,8 @@ import {
 import Cart from './Cart';
 
   const CustomNavbar = ({ cartItems, onUpdateQuantity, onRemoveItem }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { name: 'Home', href: '#', icon: Home },
@@ -54,6 +54,7 @@ import Cart from './Cart';
         className="bg-transparent shadow-none backdrop-blur-sm"
         isBordered={false}
         position="static"
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
         {/* Brand */}
@@ -145,8 +146,8 @@ import Cart from './Cart';
           {/* Mobile menu toggle */}
           <NavbarItem className="md:hidden">
             <NavbarMenuToggle
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              className="text-white hover:text-blue-200 transition-colors"
+              aria-label="Toggle menu"
+               className="text-white w-10 h-10 flex items-center justify-center hover:text-blue-200 transition-colors cursor-pointer"
             />
           </NavbarItem>
         </NavbarContent>

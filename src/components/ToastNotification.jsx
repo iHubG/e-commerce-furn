@@ -19,10 +19,12 @@ const ToastNotification = ({ isVisible, onClose, item }) => {
         isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
       }`}>
         <div className="flex items-center gap-3">
+          {/* Success Icon */}
           <div className="flex-shrink-0">
             <CheckCircle className="w-6 h-6 text-green-500" />
           </div>
           
+          {/* Product Image */}
           <div className="flex-shrink-0">
             <img 
               src={item.image} 
@@ -31,13 +33,14 @@ const ToastNotification = ({ isVisible, onClose, item }) => {
             />
           </div>
           
+          {/* Content */}
           <div className="flex-1 min-w-0">
             <p className="font-semibold text-sm text-gray-800">Added to cart!</p>
             <p className="text-sm text-gray-600 truncate">{item.name}</p>
             <p className="text-sm font-medium text-green-600">${item.price}</p>
           </div>
           
-        
+          {/* Close Button */}
           <button 
             onClick={onClose}
             className="flex-shrink-0 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-1 transition-colors"
@@ -46,12 +49,15 @@ const ToastNotification = ({ isVisible, onClose, item }) => {
           </button>
         </div>
         
+        {/* Progress Bar */}
         <div className="mt-3 w-full bg-gray-200 rounded-full h-1">
           <div 
-            className="bg-green-500 h-1 rounded-full transition-all duration-3000 ease-linear"
+            className={`bg-green-500 h-1 rounded-full transition-all ease-linear ${
+              isVisible ? 'toast-progress' : ''
+            }`}
             style={{
-              width: isVisible ? '0%' : '100%',
-              animation: isVisible ? 'progress 3s linear forwards' : 'none'
+              width: isVisible ? '100%' : '0%',
+              animationDuration: '3s'
             }}
           />
         </div>
