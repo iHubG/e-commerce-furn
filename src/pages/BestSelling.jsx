@@ -38,11 +38,10 @@ const StarRating = ({ rating }) => {
   )
 }
 
-const BestSelling = () => {
+const BestSelling = ({ onAddToCart }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [cardsPerView, setCardsPerView] = useState(4)
 
-  // Set responsive cards per view
   useEffect(() => {
     const updateCardsPerView = () => {
       if (window.innerWidth >= 1024) {
@@ -61,7 +60,6 @@ const BestSelling = () => {
     return () => window.removeEventListener('resize', updateCardsPerView)
   }, [])
 
-  // Create extended array for infinite scroll
   const extendedItems = [
     ...chairData.slice(-cardsPerView),
     ...chairData,
@@ -76,7 +74,6 @@ const BestSelling = () => {
     setCurrentIndex(prev => prev - 1)
   }
 
-  // Reset to real items when at cloned sections
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentIndex >= chairData.length) {
@@ -142,9 +139,17 @@ const BestSelling = () => {
                     </div>
                     <div className="mt-auto flex items-center justify-between">
                       <span className="text-lg sm:text-xl font-bold">{item.price}</span>
-                      <button className="bg-black p-1.5 sm:p-2 rounded-full hover:bg-neutral-700 transition-colors">
-                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </button>
+                        <button 
+                          onClick={() => onAddToCart({
+                            id: `${item.title}-${idx}`, 
+                            name: item.title,
+                            price: parseInt(item.price.replace('$', '')), 
+                            image: item.imageUrl
+                          })}
+                          className="bg-black p-1.5 sm:p-2 rounded-full hover:bg-neutral-700 transition-colors"
+                        >
+                          <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-white cursor-pointer" />
+                        </button>
                     </div>
                   </div>
                 </Card>
@@ -170,7 +175,6 @@ const BestSelling = () => {
         </button>
       </div>
 
-      {/* View All Link */}
       <Link
         to="/"
         className="flex mx-auto mt-10 gap-2 items-center text-sm text-amber-500 
