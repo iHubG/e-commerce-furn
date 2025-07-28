@@ -30,7 +30,7 @@ const WhyChoosingUs = () => {
       {cardData.map((card, index) => (
         <Card key={index} className="px-2 flex flex-col gap-3 mt-10 lg:mt-0">
           <h3 className="text-lg font-semibold">{card.title}</h3>
-          <p className="text-sm">{card.description}</p>
+          <p className="text-sm text-gray-600">{card.description}</p>
           <Link to={card.link} className="flex gap-3 items-center text-sm text-amber-500 
                    hover:text-amber-600 transition-colors w-fit group">
             More Info <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/>
