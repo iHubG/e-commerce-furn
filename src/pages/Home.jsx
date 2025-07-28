@@ -13,7 +13,7 @@ const Home = () => {
           backgroundImage: `url(${LandingBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100dvh',
+          height: '100vh',
           width: '100%',
         }}
         className="relative scroll-smooth"
