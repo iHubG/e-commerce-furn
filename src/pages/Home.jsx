@@ -76,8 +76,8 @@ const Home = () => {
           </h1>
           <p className="text-center leading-8 text-sm lg:text-lg px-10 lg:px-0">
             Turn your room with furn into a lot more minimalist
-            <span className="hidden lg:inline"><br /> &nbsp;</span>
-             and modern with ease and speed
+            <span className="hidden lg:inline"><br /></span>
+            &nbsp;and modern with ease and speed
           </p>
 
           <SearchBar text="Search furniture" className="mt-5 m-auto w-xs px-5 lg:px-0"/>
