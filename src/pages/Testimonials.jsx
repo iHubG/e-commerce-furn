@@ -62,32 +62,33 @@ const TestimonialCard = ({ name, title, review, rating, avatarSrc, backgroundIma
 }
 
 const Testimonials = () => {
-  const testimonials = [
+    const testimonials = [
     {
-      name: "Bang Upin",
-      title: "Pedagang Asongan",
-      review: "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal",
-      rating: 4,
-      avatarSrc: Avatar1,
-      backgroundImage: Testimonial1
+        name: "Bang Upin",
+        title: "Street Vendor",
+        review: "Thank you so much! Now my room looks more luxurious and expensive.",
+        rating: 4,
+        avatarSrc: Avatar1,
+        backgroundImage: Testimonial1
     },
     {
-      name: "Ibuk Sukijan",
-      title: "Ibu Rumah Tangga",
-      review: "Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah",
-      rating: 4,
-      avatarSrc: Avatar2,
-      backgroundImage: Testimonial2
+        name: "Ibuk Sukijan",
+        title: "Homemaker",
+        review: "Thanks, Furn! It now feels like I'm living in an apartment because the furniture looks so luxurious.",
+        rating: 4,
+        avatarSrc: Avatar2,
+        backgroundImage: Testimonial2
     },
     {
-      name: "Mpok Ina",
-      title: "Karyawan Swasta",
-      review: "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak",
-      rating: 4,
-      avatarSrc: Avatar3,
-      backgroundImage: Testimonial3
+        name: "Mpok Ina",
+        title: "Private Employee",
+        review: "Very affordable for someone like me who doesn’t have a big budget.",
+        rating: 4,
+        avatarSrc: Avatar3,
+        backgroundImage: Testimonial3
     }
-  ]
+    ];
+
 
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
