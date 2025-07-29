@@ -6,6 +6,8 @@ import WhyChoosingUs from './WhyChoosingUs';
 import BestSelling from './BestSelling';
 import Experiences from './Experiences';
 import ToastNotification from '../components/ToastNotification';
+import Footer from '../components/Footer';
+import Testimonials from './Testimonials';
 
 const Home = () => {
   
@@ -86,6 +88,8 @@ const Home = () => {
         <WhyChoosingUs />
         <BestSelling onAddToCart={addToCart}/>
         <Experiences />
+        <Testimonials />
+        <Footer />
       </main>
     </div>
   );
