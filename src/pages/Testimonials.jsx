@@ -103,11 +103,11 @@ const Testimonials = () => {
       </div>
 
       <div className="relative">
-        <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+        <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow invisible lg:visible">
           <ChevronLeft className="w-6 h-6 text-gray-600" />
         </button>
         
-        <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+        <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow invisible lg:visible">
           <ChevronRight className="w-6 h-6 text-gray-600" />
         </button>
 
