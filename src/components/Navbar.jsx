@@ -51,7 +51,7 @@ import Cart from './Cart';
     <>
       <Navbar
         maxWidth="full"
-        className="bg-transparent shadow-none backdrop-blur-sm max-w-7xl mx-auto"
+        className="bg-transparent shadow-none backdrop-blur-sm"
         isBordered={false}
         position="static"
         isMenuOpen={isMenuOpen}
@@ -65,7 +65,7 @@ import Cart from './Cart';
         </NavbarBrand>
 
         {/* Desktop Navigation */}
-        <NavbarContent className="hidden md:flex gap-8" justify="center">
+        <NavbarContent className="hidden md:flex gap-8 max-w-7xl mx-auto" justify="center">
           <NavbarItem>
             <NextLink 
               href="#" 
