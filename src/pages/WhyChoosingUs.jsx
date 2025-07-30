@@ -23,7 +23,7 @@ const cardData = [
 
 const WhyChoosingUs = () => {
   return (
-    <section className="p-10 py-20 gap-2 grid lg:grid-cols-4 max-w-7xl">
+    <section className="p-10 py-20 gap-2 grid lg:grid-cols-4 max-w-7xl mx-auto">
       <Card className="p-10">
         <h2 className="text-3xl font-semibold whitespace-nowrap">Why <br /> Choosing Us</h2>
       </Card>

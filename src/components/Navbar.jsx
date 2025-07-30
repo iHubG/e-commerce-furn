@@ -51,7 +51,7 @@ import Cart from './Cart';
     <>
       <Navbar
         maxWidth="full"
-        className="bg-transparent shadow-none backdrop-blur-sm max-w-7xl"
+        className="bg-transparent shadow-none backdrop-blur-sm max-w-7xl mx-auto"
         isBordered={false}
         position="static"
         isMenuOpen={isMenuOpen}
